@@ -20,6 +20,7 @@ export class MenuOption extends Component {
 
   _getMenusOnSelect() {
     const menu = this.props.ctx.menuActions._getOpenedMenu();
+    if (!menu) return () => {};
     return menu.instance.props.onSelect;
   }
 

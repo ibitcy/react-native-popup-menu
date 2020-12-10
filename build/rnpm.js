@@ -2470,6 +2470,7 @@
       value: function _getMenusOnSelect() {
         var menu = this.props.ctx.menuActions._getOpenedMenu();
 
+        if (!menu) return function () {};
         return menu.instance.props.onSelect;
       }
     }, {
